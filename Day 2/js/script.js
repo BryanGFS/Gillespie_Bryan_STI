@@ -198,3 +198,28 @@ var quiz3 = 90;
 var average = (quiz1 + quiz2 + quiz3)/3;
 
 console.log("Average: " + average);
+
+//Concatenation - Combining Text Strings
+//Use the Plus sign
+
+var firstName = "Kermit";
+var lastName = "The Frog";
+
+var fullName = firstName + " " + lastName;
+console.log("Name: " + fullName);
+
+var d = "6";
+var e = 7;
+
+//If you want the test string to be a number you to cast it.
+
+var combined = Number(d) + e;
+console.log("Combined: " + combined);
+
+var pi = Math.PI;
+
+//Round with .toFixed();
+var num = 5.582371923;
+var n = num.toFixed(2);
+
+console.log("Rounded: " + n);
