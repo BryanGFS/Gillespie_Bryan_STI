@@ -116,3 +116,85 @@ console.log("Modulo: " + remainder);
 
 var evenOrOdd = 67%2;
 console.log("Even Or Odd: " + evenOrOdd);
+
+//Assignment Operators
+/*
+ * Equals - Assigns the value to the variable
+ * PlusPlus - Adds 1 to the current value;
+ * MinusMinus - Subtracts 1 from the current value;
+ * PlusEquals - Adds value to variable;
+ * MinusEquals - Subtracts value from variable;
+ * DivideEquals - Divide the current value by the number
+ * MultiplyEquals - Multiple the current value by the number
+ */
+
+var assign = 0;
+
+//Add 1 to the value
+assign++;
+
+console.log("Assign: " + assign);
+
+//Minus 1 to the value
+assign--;
+
+console.log("Assign: " + assign);
+
+//Add 5 to the value
+assign += 5;
+
+console.log("Assign: " + assign);
+
+//Subtract 2 from the value
+assign -= 2;
+
+console.log("Assign: " + assign);
+
+//Divide value by 3
+assign /= 3;
+
+console.log("Assign: " + assign);
+
+//Multiply value by 7
+assign *= 7;
+
+console.log("Assign: " + assign);
+
+// Strings - Any text that we use
+
+var kermit = "Light Green";
+var frogName = "Kermit";
+
+console.log(frogName + " is the color " + kermit);
+
+
+//To double quote or not to
+// use \ to escape something
+var phrase = "I don't know";
+
+phrase = 'I don\'t know';
+
+console.log("Phrase: " + phrase);
+
+//Escape Char can also do multiple lines...
+
+console.log("test \n this \n new \n line");
+
+
+//Boolean
+var yes = true;
+var nope = false;
+
+
+//Order of Operations
+//PEMDAS - Please Excuse My Dear Aunt Sally
+//Parenthesis - Exponents - Multiplication - Division - Addition - Subtraction
+
+//Average Quiz Grades
+var quiz1 = 87;
+var quiz2 = 100;
+var quiz3 = 90;
+
+var average = (quiz1 + quiz2 + quiz3)/3;
+
+console.log("Average: " + average);
