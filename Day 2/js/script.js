@@ -39,15 +39,80 @@ console.log("myVariable: " + myVariable);
 
 //Declare and define a variable at the same time
 
-var anotherVar = 2;
+var a = 2;
 
 //Console.log the variable
 
-console.log("anotherVariable: " + anotherVar);
+console.log("a: " + a);
 
 //Add to my variable
 
-anotherVar = anotherVar + 3;
+a = a + 3;
 
 //Print it
-console.log("anotherVariable: " + anotherVar);
+console.log("a: " + a);
+
+//Declare another var
+
+var b;
+
+//Define a variable w/ a var
+
+b = a + 3;
+
+//Log it
+console.log("b: " + b);
+
+//Simple Math
+//Find our ages
+
+//Declare and define year born
+var year = 1996;
+var month = 6;
+var day = 22;
+
+//Current Year Variables
+var currentTime = new Date();
+var curMonth = currentTime.getMonth() + 1;
+var curDay = currentTime.getDate();
+var curYear = currentTime.getFullYear();
+
+//Our final age variable
+var age;
+
+//Find our age
+if(curMonth >= month && curDay >= day) {
+    age = curYear - year;
+} else {
+    age = curYear - year - 1;
+}
+
+//Print it
+console.log("Age: " + age);
+
+
+//Find the area of a triangle
+
+var base = 4;
+var height = 5;
+
+var areaTriangle = base * height / 2;
+
+//Print it
+console.log("Area of Triangle: " + areaTriangle);
+
+//Modulo - %
+//Gives the remainder
+
+var decimal = 32/10;
+console.log("Traditional Div: " + decimal);
+
+var remainder = 32%10;
+console.log("Modulo: " + remainder);
+
+//Find if even or odd
+//Modulo by 2
+// 0 = even, 1 = odd
+
+var evenOrOdd = 67%2;
+console.log("Even Or Odd: " + evenOrOdd);
