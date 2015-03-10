@@ -5,23 +5,44 @@
  * Expressions Assignment
  */
 
-//Prices of our shopping bills
-var shoppingPrices = [210,320,120,196,402,123,592,130,162,238];
+//Run this when the window is done loading
+window.onload = init;
 
-//The sum before we divide to average
-var sum = 0;
+//Store our code in init function
+function init() {
 
-//Loop through our array
-for(var i=0; i < shoppingPrices.length; i++){
-    //Foreach - Add it
-    sum += shoppingPrices[i];
+    //Prices of our shopping bills
+    var shoppingPrices = [];
+    //Collect first number
+    shoppingPrices[0] = parseInt(prompt('Shopping Cart Price',''));
+    //Collect second number
+    shoppingPrices[1] = parseInt(prompt('Shopping Cart Price',''));
+    //Collect third number
+    shoppingPrices[2] = parseInt(prompt('Shopping Cart Price',''));
+    //Collect forth number
+    shoppingPrices[3] = parseInt(prompt('Shopping Cart Price',''));
+    //Collect fifth number
+    shoppingPrices[4] = parseInt(prompt('Shopping Cart Price',''));
+
+    //The sum before we divide to average
+    var sum = 0;
+
+    //Loop through our array
+    for(var i=0; i < shoppingPrices.length; i++){
+        //Foreach - Add it
+        sum += shoppingPrices[i];
+    }
+
+    //Average shopping cart price...
+    var average = sum / shoppingPrices.length;
+
+    //Build our results string - .toFixed(2) to make it have 2 decimal places (cents)
+    var results = "Our average shopping bill is $" + average.toFixed(2) + " per trip!";
+
+    //Log our results
+    console.log(results);
+
+    //Set the div contents
+    document.getElementById("result").innerText = results;
+
 }
-
-//Average shopping cart price...
-var average = sum / shoppingPrices.length;
-
-//Build our results string - .toFixed(2) to make it have 2 decimal places (cents)
-var results = "Our average shopping bill is $" + average.toFixed(2) + " per trip";
-
-//Log our results
-console.log(results);
