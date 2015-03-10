@@ -100,15 +100,3 @@ if(tires[0] != tires[1] || tires[2] != tires[3]) {
     console.log("The tires pass spec!");
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
