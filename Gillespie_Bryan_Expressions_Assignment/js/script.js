@@ -37,7 +37,7 @@ function init() {
     var average = sum / shoppingPrices.length;
 
     //Build our results string - .toFixed(2) to make it have 2 decimal places (cents)
-    var results = "Our average shopping bill is $" + average.toFixed(2) + " per trip!";
+    var results = "Your average shopping bill is $" + average.toFixed(2) + " per trip!";
 
     //Log our results
     console.log(results);
