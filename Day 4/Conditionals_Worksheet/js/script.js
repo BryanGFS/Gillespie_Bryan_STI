@@ -15,11 +15,14 @@ var unit = prompt('Enter C for Celsius or F for Fahrenheit.','');
 //Get out temp
 var degrees = parseInt(prompt('Enter the temperature.',''));
 
+//Define result var
+var result;
+
 //Check if F
 if(unit == "f" || unit == "F") { // Fahrenheit
 
     //Create and set our result variable
-    var result = (degrees - 32) * (5/9);
+    result = (degrees - 32) * (5/9);
 
     //Log it
     console.log("The temperature is " + result + " degrees Celsius");
@@ -28,7 +31,7 @@ if(unit == "f" || unit == "F") { // Fahrenheit
 } else if(unit == "c" || unit == "C") { // Celsius
 
     //Create and set our result variable
-    var result = degrees * (9/5) + 32;
+    result = degrees * (9/5) + 32;
 
     //Log it
     console.log("The temperature is " + result + " degrees Fahrenheit");
