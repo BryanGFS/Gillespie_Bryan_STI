@@ -39,30 +39,49 @@ if(temp >= 80) {
     if(waterTemp > 75) {
 
         //Create Temp Variable
-        var canSwim = prompt("Can you swim? (Y or N)");
+        var canSwim = prompt("Can you swim? (Y or N)").toLowerCase();
 
         //Loop until we've got a valid input
         while(true) {
-            if(canSwim != "N" || canSwim != "Y") {
-                canSwim = prompt("Invalid input! Please only enter 'Y' or 'N'. Can you swim?");
-            } else {
+
+            if(canSwim != "n" || canSwim != "y") {
                 break;
+            } else {
+                canSwim = prompt("Invalid input! Please only enter 'Y' or 'N'. Can you swim?");
             }
+
         }
 
-        if(canSwim) {
+        if(canSwim == "y") {
             console.log("I don't even need my old swimmy floats!");
         } else {
             console.log("I'm lame and need floatys. :(");
         }
 
     } else {
+
         console.log("Let's tan!");
+
     }
 
 } else {
 
-    if(confirm("Do you have kids with you?")) {
+    //Create Temp Variable
+    var kids = prompt("Do you have kids with you? (Y or N)").toLowerCase();
+
+    //Loop until we've got a valid input
+    while(true) {
+
+        if(kids == "n" || kids == "y") {
+            break;
+        } else {
+            console.log(kids);
+            kids = prompt("Invalid input! Please only enter 'Y' or 'N'. Do you have kids with you?");
+        }
+
+    }
+
+    if(kids == "y") {
         console.log("Let's go see the spongebob movie!");
     } else {
         console.log("Let's see 50 shades of grey!");
