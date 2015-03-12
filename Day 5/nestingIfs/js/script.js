@@ -44,7 +44,7 @@ if(temp >= 80) {
         //Loop until we've got a valid input
         while(true) {
 
-            if(canSwim != "n" || canSwim != "y") {
+            if(canSwim == "n" || canSwim == "y") {
                 break;
             } else {
                 canSwim = prompt("Invalid input! Please only enter 'Y' or 'N'. Can you swim?");
