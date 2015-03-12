@@ -10,22 +10,47 @@
 // if warm then goto beach
 // else goto movies
 
-//Get temp
-var temp = prompt("What is the temperature outside?");
+//Create Temp Variable
+var temp = prompt("Let's figure out what we want to do today! What is the temperature outside?");
 
-//Water temp
-var waterTemp = 23;
-var canSwim = "yes";
-var kids = "no";
+//Loop until we've got a valid input
+while(true) {
+    if(isNaN(temp) || temp === "") {
+        temp = prompt("That's an invalid input! What is the temperature outside?");
+    } else {
+        break;
+    }
+}
 
 if(temp >= 80) {
 
-    console.log("Let's go to the beach!");
+    //Create waterTemp Variable
+    var waterTemp = prompt("What's the water temperature?");
+
+    //Loop until we've got a valid input
+    while(true) {
+        if(isNaN(waterTemp) || waterTemp === "") {
+            waterTemp = prompt("That's an invalid input! What is the water temperature?");
+        } else {
+            break;
+        }
+    }
 
     if(waterTemp > 75) {
-        console.log("Let's go swim");
 
-        if(canSwim == "yes") {
+        //Create Temp Variable
+        var canSwim = prompt("Can you swim? (Y or N)");
+
+        //Loop until we've got a valid input
+        while(true) {
+            if(canSwim != "N" || canSwim != "Y") {
+                canSwim = prompt("Invalid input! Please only enter 'Y' or 'N'. Can you swim?");
+            } else {
+                break;
+            }
+        }
+
+        if(canSwim) {
             console.log("I don't even need my old swimmy floats!");
         } else {
             console.log("I'm lame and need floatys. :(");
@@ -37,9 +62,7 @@ if(temp >= 80) {
 
 } else {
 
-    console.log("Let's watch a movie!")
-
-    if(kids == "yes") {
+    if(confirm("Do you have kids with you?")) {
         console.log("Let's go see the spongebob movie!");
     } else {
         console.log("Let's see 50 shades of grey!");
