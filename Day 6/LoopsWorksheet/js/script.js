@@ -41,7 +41,7 @@ for(var k=0; k<10; k++) {
 //VALIDATION, YES OR NO
 
 //Answer
-var bool = prompt("How many cats do you have? (Y or N)").toLowerCase();
+var bool = prompt("Do you have cats? (Y or N)").toLowerCase();
 
 //Loop until we've got a valid input
 while(true) {
@@ -51,7 +51,7 @@ while(true) {
         break;
     } else {
         //Not valid - re-ask
-        bool = prompt("Invalid input! Please only enter 'Y' or 'N'. How many cats do you have?");
+        bool = prompt("Invalid input! Please only enter 'Y' or 'N'. Do you have cats?").toLowerCase();
     }
 
 }
@@ -77,7 +77,7 @@ while(true) {
     //Check if it's valid
     if(isNaN(num) || num === "") {
         //Not valid - re-ask
-        num = prompt("Invalid Input! " + question);
+        num = prompt("Invalid Input! How many animals do you have?");
     } else {
         //Valid - break
         break;
