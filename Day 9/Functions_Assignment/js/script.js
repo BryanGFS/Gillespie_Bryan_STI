@@ -24,32 +24,6 @@ function getNum(question) {
     return parseInt(num);
 }
 
-//Function for asking a yes or no (returns boolean)
-function yesOrNo(question) {
-
-    var bool = prompt(question + " (Y or N)").toLowerCase();
-
-    //Loop until we've got a valid input
-    while(true) {
-
-        if(bool === "n" || bool === "y") {
-            break;
-        } else {
-            bool = prompt("Invalid input! Please only enter 'Y' or 'N'. " + question);
-        }
-
-    }
-
-    //init return variable
-    var ret;
-
-    //Should we return true or false?
-    (bool == "y") ? ret = true : ret = false;
-
-    //return our bool
-    return ret;
-}
-
 //Print our results
 function printResults(min, max, med, a) {
 
