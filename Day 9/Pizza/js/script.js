@@ -24,6 +24,26 @@ function getNum(question) {
     return parseInt(num);
 }
 
-alert("Welcome! Let's find out the cost of your pizza");
+function calcArea(r) {
+    return r * r * Math.PI;
+}
+
+function calcSqInCost(cost, area) {
+    return (cost/area).toFixed(2);
+}
+
+function calcSliceCost(cost, count) {
+    return (cost/count).toFixed(2);
+}
+
+alert("Welcome! Let's find out the cost of your pizza per slice!");
 
 var pizzaRadius = getNum("What's the radius of your pizza?");
+var pizzaCost = getNum("What's the total price of your pizza?");
+var sliceCount = getNum("How many slices are in your pizza?");
+
+var area = calcArea(pizzaRadius);
+var sqInCost = calcSqInCost(pizzaCost, area);
+var sliceCost = calcSliceCost(pizzaCost, sliceCount);
+
+console.log("We've finished calculating the results! \nCost per Square Inch: $" + sqInCost + "\nCost per Slice: $" + sliceCost);
