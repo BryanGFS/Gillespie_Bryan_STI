@@ -13,7 +13,7 @@ while (i < 10) {
     //Log it
     console.log("While Loop Iteration: " + i);
 
-    //Add one
+    //Add Pizza
     i++;
 }
 
@@ -24,7 +24,7 @@ do {
 
     //Log it
     console.log("Do Loop Iteration: " + j);
-    //Add one
+    //Add Pizza
     j++;
 
 //Condition
