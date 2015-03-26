@@ -5,11 +5,29 @@
  * Expressions Assignment
  */
 
+function getNum(question) {
+
+    //Ask out question for our number
+    var num = prompt(question);
+
+    //Validate it!
+    while(true) {
+        if(isNaN(num) || num === "") {
+            num = prompt("Invalid Input! " + question);
+        } else {
+            break;
+        }
+    }
+
+    //return our number
+    return parseInt(num);
+}
+
 //Basic conditional - Do I have enough money to buy a car
 
-var budget = 15000;
-var carPrice = 23000;
-var paycheck = 1600;
+var budget = getNum("Total Budget");
+var carPrice = getNum("Car Price");
+var paycheck = getNum("Paycheck Amount");
 
 if(budget < carPrice) {
 

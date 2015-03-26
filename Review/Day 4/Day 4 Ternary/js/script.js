@@ -5,9 +5,27 @@
  * Expressions Assignment
  */
 
+function getNum(question) {
+
+    //Ask out question for our number
+    var num = prompt(question);
+
+    //Validate it!
+    while(true) {
+        if(isNaN(num) || num === "") {
+            num = prompt("Invalid Input! " + question);
+        } else {
+            break;
+        }
+    }
+
+    //return our number
+    return parseInt(num);
+}
+
 //If GPA > 2.0 you can Graduate
 
-var gpa = 3.5;
+var gpa = getNum("Whats your GPA?");
 
 //Basic If Statement
 if(gpa > 2.0) {
@@ -22,7 +40,7 @@ if(gpa > 2.0) {
 
 //If child < 10 = must read GE&H or TTM
 
-var childAge = 9;
+var childAge = getNum("How old is the child?");
 var book;
 
 book = (childAge < 10) ? "Green Eggs and Ham" : "The Time Machine";

@@ -5,14 +5,32 @@
  * Day 2 Lab Expressions
  */
 
+function getNum(question) {
+
+    //Ask out question for our number
+    var num = prompt(question);
+
+    //Validate it!
+    while(true) {
+        if(isNaN(num) || num === "") {
+            num = prompt("Invalid Input! " + question);
+        } else {
+            break;
+        }
+    }
+
+    //return our number
+    return parseInt(num);
+}
+
 //Slice of Pie part 1
 
 //People
-var peopleCount = 10;
+var peopleCount = getNum("How many people?");
 //Pizza count
-var pizzaCount = 4;
+var pizzaCount = getNum("How many pizzas?");
 //Slices
-var sliceCount = 8;
+var sliceCount = getNum("How many slices per pizza?");
 
 //Total Slices
 var totalSlices = pizzaCount * sliceCount / peopleCount;
@@ -33,7 +51,12 @@ console.log("Sparky gets " + sparkySlices + " slices of pizza.");
 //Average Shopping Bill
 
 //Array of bills
-var bills = [200, 300, 230, 240, 310];
+var bills = [
+    getNum("First bill total"),
+    getNum("Second bill total"),
+    getNum("Third bill total"),
+    getNum("Fourth bill total"),
+    getNum("Fifth bill total")];
 //Sum
 var sum = 0;
 
@@ -55,11 +78,11 @@ console.log("Average amount spent per trip: $" + average);
 //Description
 var desc = "T-Shirt";
 //Original
-var original = 20;
+var original = getNum("Original price of T-Shirt");
 //Discount
-var discount = 25;
+var discount = getNum("Discount Percentage");
 //Tax
-var tax = 6;
+var tax = getNum("Tax percentage");
 
 //Discounted
 var discounted = (1-(discount/100)) * original;

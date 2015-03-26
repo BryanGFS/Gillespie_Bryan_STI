@@ -5,6 +5,25 @@
  * Day 2 Intro
  */
 
+//Function for getting a number prompt w/ validation
+function getNum(question) {
+
+    //Ask out question for our number
+    var num = prompt(question);
+
+    //Validate it!
+    while(true) {
+        if(isNaN(num) || num === "") {
+            num = prompt("Invalid Input! " + question);
+        } else {
+            break;
+        }
+    }
+
+    //return our number
+    return parseInt(num);
+}
+
 //alert("Hello World");
 
 /*
@@ -67,9 +86,9 @@ console.log("b: " + b);
 //Find our ages
 
 //Declare and define year born
-var year = 1996;
-var month = 6;
-var day = 22;
+var year = getNum("What year were you born?");
+var month = getNum("What month were you born? (enter the number value)");
+var day = getNum("What day were you born?");
 
 //Current Year Variables
 var currentTime = new Date();
@@ -93,8 +112,8 @@ console.log("Age: " + age);
 
 //Find the area of a triangle
 
-var base = 4;
-var height = 5;
+var base = getNum("What is the size of your triangle base?");
+var height = getNum("What is the height of your triangle?");
 
 var areaTriangle = base * height / 2;
 
@@ -191,9 +210,9 @@ var nope = false;
 //Parenthesis - Exponents - Multiplication - Division - Addition - Subtraction
 
 //Average Quiz Grades
-var quiz1 = 87;
-var quiz2 = 100;
-var quiz3 = 90;
+var quiz1 = getNum("Whats the first quiz grade?");
+var quiz2 = getNum("Whats the second quiz grade?");
+var quiz3 = getNum("Whats the third quiz grade?");
 
 var average = (quiz1 + quiz2 + quiz3)/3;
 
